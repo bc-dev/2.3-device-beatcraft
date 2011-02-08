@@ -1,0 +1,11 @@
+#
+# system.prop for generic sdk 
+#
+
+ro.sf.lcd_density=120
+rild.libpath=/system/lib/libreference-ril.so
+rild.libargs=-d /dev/ttyS0
+ro.config.sync = yes
+keyguard.no_require_sim=1
+dalvik.vm.dexopt-flags=m=y
+

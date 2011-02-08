@@ -1,0 +1,34 @@
+on boot
+    setprop ro.radio.use-ppp no
+    setprop ro.radio.noril yes
+    setprop net.eth0.dns1 8.8.8.8
+    setprop net.dns1 8.8.8.8
+
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+#    mkdir /data/misc/wifi 0770 wifi wifi
+#    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+#    mkdir /data/misc/dhcp 0770 dhcp dhcp
+#    chown dhcp dhcp /data/misc/dhcp
+
+    # Wakelock debug
+    write /sys/module/wakelock/parameters/debug_mask 7
+
+#LAN
+service lan-setup /system/etc/init.omap3.sh
+    oneshot
+
+#service wpa_supplicant /system/bin/wpa_supplicant \
+#    -Dwext -ira0 -c/data/misc/wifi/wpa_supplicant.conf
+#   we will start as root and wpa_supplicant will switch to user wifi
+#   after setting up the capabilities required for WEXT
+#   user wifi
+#   group wifi inet keystore
+#    socket wpa_eth0 dgram 660 wifi wifi
+#    disabled
+#    oneshot
+
+#service dhcpcd /system/bin/dhcpcd -ABKL
+#    disabled
+#    oneshot
+

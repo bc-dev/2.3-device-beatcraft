@@ -1,0 +1,9 @@
+
+/dev/pvrsrvkm             0666   system     system
+/dev/video0               0666   system     camera
+
+# for Sensor HAL
+/dev/ami602               0666   system     system
+
+# for GPS
+/dev/ttyS1                0666   gps        gps
