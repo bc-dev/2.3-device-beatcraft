@@ -153,8 +153,8 @@ PRODUCT_LOCALES := ldpi hdpi mdpi
 PRODUCT_COPY_FILES += \
 	device/beatcraft/bc10/rt3070sta.ko:system/lib/modules/rt3070sta.ko
 
-#PRODUCT_COPY_FILES += \
-#	device/beatcraft/bc10/RT2870STA.dat:system/etc/Wireless/RT2870STA/RT2870STA.dat
+PRODUCT_COPY_FILES += \
+	device/beatcraft/bc10/RT2870STA.dat:system/etc/Wireless/RT2870STA/RT2870STA.dat
 
 PRODUCT_COPY_FILES += \
 	device/beatcraft/bc10/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
